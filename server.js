@@ -4,7 +4,7 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session)
 const path = require("path");
-
+require("dotenv").config()
 // Instanced modules
 const app = express();
 // configuration
@@ -75,7 +75,11 @@ app.use("/", controllers.auth)
 
 
 //server listener
+<<<<<<< HEAD
 app.listen(process.env.PORT,  () =>  {
+=======
+app.listen(process.env.PORT || 4000,  () =>  {
+>>>>>>> 04c17ec24ce572c27dd6f6a60fda255e16ff6090
     console.log(`Listening to ${PORT}`)
 })
 
