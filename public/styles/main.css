@@ -20,3 +20,19 @@ body {
     max-width: 60%;
     height: auto;
 }
+
+
+.card-image{
+    min-height: 28em;
+    margin: auto;
+   
+}
+
+.card-title{
+    background-color: teal;
+}
+
+.card{
+    min-height: 28em;
+    margin: 20em;
+}

@@ -8,7 +8,10 @@ const path = require("path");
 // Instanced modules
 const app = express();
 // configuration
-const PORT = process.env.PORT || 4000;
+
+require("dotenv").config();
+
+const PORT = process.env.PORT ;
 // Internal modules
 const db = require("./models");
 app.set("view engine", "ejs")
@@ -24,9 +27,9 @@ app.use(methodOverride("_method"));
 app.use(session({
     resave: false,
     saveUninitialized: false,
-    secret: "Rainbows",
+    secret: process.env.SECRET,
     store: new MongoStore({
-        url:"mongodb://localhost:27017/restaurant-session",
+        url: process.env.MONGODB_URI || "mongodb://localhost:27017/restaurant-session",
     }),
     cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 7
@@ -72,7 +75,7 @@ app.use("/", controllers.auth)
 
 
 //server listener
-app.listen(PORT,  () =>  {
+app.listen(process.env.PORT,  () =>  {
     console.log(`Listening to ${PORT}`)
 })
 

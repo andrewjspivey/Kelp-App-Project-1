@@ -1,7 +1,12 @@
 // hub for models and db connection
 const mongoose = require('mongoose');
 
-const connectionString = process.env.MONGODB_URI || 'mongodb://localhost:27017/restaurants-db';
+
+require("dotenv").config();
+const connectionString = "mongodb+srv://keyahnajanae:rainbows77@cluster0.hmdsq.mongodb.net/restaurants-db?retryWrites=true&w=majority"
+// process.env.MONGODB_URI || 'mongodb://localhost:27017/restaurants-db';
+
+
 
 mongoose.connect(connectionString, {
     useNewUrlParser: true,

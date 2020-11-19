@@ -53,16 +53,14 @@
             <div class="card">
                 <div class="card-image">
                     <a href="/restaurants/<%= restaurant._id %>">
-                    <img src="<%= restaurant.image %>">
+                    <img class="img-card" src="<%= restaurant.image %>"/>
                     </a>
+                 
                     <a href="/restaurants/<%= restaurant._id %>/newreview">
                     <span class="card-title"><%= restaurant.name %></span>
                     <a class="btn turqoise" href="/restaurants/<%= restaurant._id %>/newreview"><i class="material-icons">Write A Review</i></a>
                     </a>    
-                </div>
-                <div class="card-content">
-                    <p></p>
-                </div>
+                  </div>
             </div>
         </div>
     <%  }); %>
