@@ -20,3 +20,11 @@ body {
     max-width: 60%;
     height: auto;
 }
+
+.card-image img{
+    height: 20rem; 
+}
+
+.hero-body {
+    padding: 2rem !important;
+}
