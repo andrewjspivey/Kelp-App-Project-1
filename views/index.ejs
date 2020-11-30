@@ -30,43 +30,33 @@
                   <a class="navbar-item" href="/restaurants">
                     All Restaurants
                   </a>
-            
-                  <a class="navbar-item" href="/restaurants/new">Add a Restaurant
-                 
+                  <a class="navbar-item" href="/restaurants/new">
+                    Add a Restaurant
                   </a>
 
                   <!-- Nav bar for login  -->
-                  <span class="nav-bar">
-                  <% if(user) { %>
-                    <p>Welcome, <%= user.username %></p>
-                    <span class="navbar-item">
-                          <span class="icon">
-                            <form class="button is-primary is-inverted" action="/logout?_method=DELETE" method="POST">
-                                <input id="logout-button" class="button is-primary is-inverted" type="submit" value="Logout">
-                              </form>
-                          </span>
-                  <% } else { %> 
-                    <span class="navbar-item">
-                        <a href="/login"class="button is-primary is-inverted">
-                          <span class="icon">
-                            
-                          </span>
-                          <span>Login</span>
-                        </a>
-                      </span> <span class="navbar-item">
-                        <a href="/register" class="button is-primary is-inverted">
-                          <span class="icon">
-                            
-                          </span>
-                          <span>Register</span>
-                        </a>
-                      </span>
-                    
-                          
-                        </a>
-                      </span>
-                  <% } %>
-                </span>
+                  <div class="navbar">
+                    <% if(user) { %>
+                      <p>Welcome, <%= user.username %></p>
+                      <div class="navbar-item">
+                                <form class="button is-primary is-inverted" action="/logout?_method=DELETE" method="POST">
+                                  <input id="logout-button" class="button is-primary is-inverted" type="submit" value="Logout">
+                                </form>
+                      </div>
+                    <% } else { %> 
+                      <div class="navbar-item">
+                          <a href="/login"class="button is-primary is-inverted">
+                            Login
+                          </a>
+                      </div> 
+                      <div class="navbar-item">
+                          <a href="/register" class="button is-primary is-inverted">
+                            Register
+                          </a>
+                      </div>
+                    </div>
+                    <% } %>
+                  </div>
                 </div>
               </div>
             </div>
