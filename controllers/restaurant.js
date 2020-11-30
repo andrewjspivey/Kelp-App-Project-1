@@ -120,10 +120,10 @@ router.get("/:id/edit", async (req, res) =>{
         if (foundRestaurant.user == req.session.currentUser.id) {
             res.render("restaurant/edit", context)
         } else {
-            res.send({message: "You are not authorized to edit this restaurant"})
+            res.send({message: "You are not authorized to edit this restaurant. If you added this restaurant, please login in and try again."})
         } 
     } catch (error) {
-        res.send({message:"Internal Service Error"})
+        res.send({message:"You are not authorized to edit this restaurant. If you added this restaurant, please login in and try again."})
         console.log(error)
     }    
 })

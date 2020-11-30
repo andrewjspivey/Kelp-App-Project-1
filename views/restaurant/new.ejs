@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>All Restaurants</title>
@@ -41,62 +41,59 @@
       </nav>
     </div>
   </section>
-
+    <div class="new-header">
+      <h1>New Restaurant</h1>
+    </div>
         <div class="row">
-            <h1 class="new-restaurant">New Restaurant</h1>
-    <form class="col s12" action="/restaurants" method="POST">
+          <form class="col s12" action="/restaurants" method="POST">
+              <div class="input-field inline col s6">
+                <input class="validate" type="text" name="name" />
+                <label class="active" for="name">Name</label>
+              </div>
+              <div class="input-field inline col s6">
+                <input class="validate" type="text" name="location" />
+                <label class="active" for="location">Location- city and or general area</label>
+              </div>
+              <div class="input-field inline col s6">
+                  <input class="validate" type="text" name="address" />
+                  <label class="active" for="address">Address</label>
+              </div>
+              <div class="input-field inline col s6">
+                  <input class="validate" type="text" name="businessHours" />
+                  <label class="active" for="businessHours">Business Hours</label>
+              </div>
+                  <input class="validate" type="text" name="image" />
+                  <label class="active" for="image">Upload An Image</label>
+                  <input class="validate" type="text" name="description" />
+                  <label class="active" for="description">Short description or categories ex. Italian, or: salads, soups, and sandwhiches</label>
+    
+              <div class="row">
+                  <div class="input-field inline col s6">
+                      <label id="delivery-checkbox">
+                          <input class="validate" type="checkbox" name="delivery" id="delivery-checkbox" />
+                          <span>Delivery Options? </span>
+                        </label>
+                  </div>
+                      <div class="input-field inline col s6">
+                      <label id="takeout-checkbox">
+                          <input class="validate" type="checkbox" name="takeOut" id="takeout-checkbox" />
+                          <span>Take Out Options? </span>
+                        </label>
+                  </div>
+                      <div class="input-field inline col s6">
+                  <label id="dinein-checkbox">
+                      <input class="validate" type="checkbox" name="dineIn" id="dinein-checkbox" />
+                      <span>Dine In Option? </span>
+                    </label>
+                  </div>
+              </div>
         
-        <div class="input-field inline col s6">
-        <input class="validate" type="text" name="name" />
-        <label class="active" for="name">Name</label>
+            <div class="row">
+                <div class="input-field inline col s6">
+                    <input class="waves-effect waves-light btn" type="submit" value="New Restaurant" />
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="input-field inline col s6">
-        <input class="validate" type="text" name="location" />
-        <label class="active" for="location">Location- city and or general area</label>
-        </div>
-        <div class="input-field inline col s6">
-            <input class="validate" type="text" name="address" />
-              <label class="active" for="address">Address</label>
-          </div>
-        <div class="input-field inline col s6">
-      <input class="validate" type="text" name="businessHours" />
-        <label class="active" for="businessHours">Business Hours</label>
-    </div>
-    <input class="validate" type="text" name="image" />
-    <label class="active" for="image">Upload An Image</label>
-    <input class="validate" type="text" name="description" />
-    <label class="active" for="description">Short description or categories ex. Italian, or: salads, soups, and sandwhiches</label>
-  
-<div class="row">
-    <div class="input-field inline col s6">
-        <label id="delivery-checkbox">
-            <input class="validate" type="checkbox" name="delivery" id="delivery-checkbox" type="checkbox" />
-            <span>Delivery Options? </span>
-          </label>
-    </div>
-        <div class="input-field inline col s6">
-        <label id="takeout-checkbox">
-            <input class="validate" type="checkbox" name="takeOut" id="takeout-checkbox" type="checkbox" />
-            <span>Take Out Options? </span>
-          </label>
-    </div>
-        <div class="input-field inline col s6">
-         
-    <label id="dinein-checkbox">
-        <input class="validate" type="checkbox" name="dineIn" id="dinein-checkbox" type="checkbox" />
-        <span>Dine In Option? </span>
-      </label>
-
-    </div>
-    </div>
-  
-<div class="row">
-    <div class="input-field inline col s6">
-        <input class="waves-effect waves-light btn" type="submit" value="New Restaurant" />
-    </div>
-    </div>
-    </form>
-</form>
-</div>
 </body>
 </html>

@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Document</title>
 </head>
 <body>
     <section class="hero is-primary is-medium">
-        <!-- Hero head: will stick at the top -->
         <div class="hero-head">
           <nav class="navbar">
             <div class="container">
@@ -29,47 +28,43 @@
                   <a class="navbar-item is-active" href="/restaurants">
                     Restaurants
                   </a>
-                  <a class="navbar-item" href="/">Home
+                  <a class="navbar-item" href="/">
+                    Home
                   </a>
-                  <a class="navbar-item" href="/restaurants/new">Add a Restaurant
-                 
+                  <a class="navbar-item" href="/restaurants/new">
+                    Add a Restaurant
                   </a>
-    
-                  <!-- Nav bar for login  -->
-                  
                 </div>
               </div>
             </div>
           </nav>
         </div>
-      </section>
+    </section>
 
 
      
-    <h1>Write a review for <%= restaurant.name %></h1>
+    <h1>Review <%= restaurant.name %> of <%= restaurant.location %></h1>
     <main>
         <div class="row">
-        <form action="/restaurants/<%= restaurant._id %> " method="POST">
+        <form action="/restaurants/<%= restaurant._id %>" method="POST">
             <div class="row">
                 <div class="input-field col s6">
                     <input class="validate" type="text" name="author" />
                     <label class="active" for="author">Name</label>
-              </div>
+                </div>
                 <div class="input-field col s6">
                     <input class="validate" type="text" name="review" />
                     <label class="active" for="review">Review</label>
                 </div>
-                 <div class="input-field inline col s6">
+                <div class="input-field inline col s6">
                     <label id="recommend-checkbox">
                         <input class="validate" type="checkbox" name="recommend" id="recommend-checkbox" type="checkbox" />
                         <span>Do You Recommend? </span>
-                      </label>
-                  </div> 
-                
-            <input class="waves-effect waves-light btn" type="submit" value="Submit Review" />
-            
-              
-    </div>
+                    </label>
+                </div> 
+              <input class="waves-effect waves-light btn" type="submit" value="Submit Review" />
+        </form>
+        </div>
     </main>
 </body>
 </html>
