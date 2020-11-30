@@ -26,10 +26,14 @@ body {
 }
 
 .hero-body {
-    padding: 2rem !important;
+    padding: 2.5rem !important;
 }
 
 .card-content p {
     font-weight: bold !important;
+}
+
+.navbar {
+    margin-right: 2rem !important;
 }
 
