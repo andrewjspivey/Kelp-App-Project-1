@@ -6,6 +6,7 @@ body {
 .ind-review-loop {
     font-size: 20px;
     font-weight: 10;
+
 }
 
 #review-review {
@@ -16,8 +17,12 @@ body {
     height: auto;
 }
 
+.review-grid {
+    margin: 0.5rem 1rem 0rem 2.5rem;
+}
+
 #restaurant-image {
-    max-width: 60%;
+    width: 65%;
     height: auto;
 }
 
@@ -65,4 +70,9 @@ body {
 #navbarMenuHeroA.navbar-menu {
     margin-right: 1rem !important;
 }
+
+#restaurant-info {
+    text-align: center;
+}
+
 
