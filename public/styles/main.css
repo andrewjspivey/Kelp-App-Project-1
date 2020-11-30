@@ -44,6 +44,9 @@ body {
 .hero-body {
     padding: 2.5rem !important;
 }
+.card-title {
+    font-size: 32px !important;
+}
 
 
 .card-content p {
@@ -52,5 +55,14 @@ body {
 
 .navbar {
     margin-right: 2rem !important;
+}
+
+.navbar-item img {
+    max-height: 3.3rem !important;
+    margin-left: 2rem !important;
+}
+
+#navbarMenuHeroA.navbar-menu {
+    margin-right: 1rem !important;
 }
 
