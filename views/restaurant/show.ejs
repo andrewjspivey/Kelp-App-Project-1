@@ -33,56 +33,53 @@
                   <a class="navbar-item" href="/">Home
                   </a>
                   <a class="navbar-item" href="/restaurants/new">Add a Restaurant
-                 
                   </a>
-
-            
-                  
                 </div>
               </div>
             </div>
           </nav>
         </div>
-        </section>
-    
-    <h1><%= restaurant.name %></h1> 
-    <a class="waves-effect waves-light btn" href="/restaurants/<%= restaurant._id %>/edit">Edit Restaurant</a>
-    <div class="input-field inline col s6">
+      </section>
 
-    <div class="write-review-btn">  <a class="waves-effect waves-light btn" href="/restaurants/<%= restaurant._id %>/newreview">Write a Review</a></div>
-  </div>
-    <br>
-    <img id="restaurant-image"src="<%= restaurant.image %>">
-    <br>
-   
+    <div id="restaurant-info">
+        <h1><%= restaurant.name %></h1> 
+        <a class="waves-effect waves-light btn" href="/restaurants/<%= restaurant._id %>/edit">Edit Restaurant</a>
+        <div class="input-field inline col s6">
 
-    <h3><%= restaurant.location %></h3>
-    <h4><%= restaurant.address %> </h4>
-  
+        <div class="write-review-btn">  <a class="waves-effect waves-light btn" href="/restaurants/<%= restaurant._id %>/newreview">Write a Review</a></div>
+      </div>
+        <br>
+        <img id="restaurant-image"src="<%= restaurant.image %>">
+        <br>
+      
 
-    <% if(!restaurant.businessHours){ %>
-     <p>Business Hours Unavailable</p>
-    <% } else { %>
-    <p>Business Hours: <%= restaurant.businessHours %></p>
-    <% } %>
-     
-    
+        <h3><%= restaurant.location %></h3>
+        <h4><%= restaurant.address %> </h4>
+        <h6><%= restaurant.description %></h6>
+      
 
-<% if(restaurant.delivery == true){ %>
-  <a class="waves-effect waves-light btn pulse"><i class="material-icons">Delivery Available</i></a>
-<% } %>
+        <% if(!restaurant.businessHours){ %>
+        <p>Business Hours Unavailable</p>
+        <% } else { %>
+        <p>Business Hours: <%= restaurant.businessHours %></p>
+        <% } %>
 
-<% if(restaurant.takeOut == true){ %>
-  <a class="waves-effect waves-light btn pulse"><i class="material-icons">Take Out Available</i></a>
-<% } %>
+        
+        <% if(restaurant.delivery == true){ %>
+          <a class="waves-effect waves-light btn pulse"><i class="material-icons">Delivery Available</i></a>
+        <% } %>
 
-<% if(restaurant.dineIn == true){ %>
-  <a class="waves-effect waves-light btn pulse"><i class="material-icons">Dine In Options</i></a>
+        <% if(restaurant.takeOut == true){ %>
+          <a class="waves-effect waves-light btn pulse"><i class="material-icons">Take Out Available</i></a>
+        <% } %>
 
-<% } %>
+        <% if(restaurant.dineIn == true){ %>
+          <a class="waves-effect waves-light btn pulse"><i class="material-icons">Dine In Options</i></a>
 
-    
-   
+        <% } %>
+
+      
+    </div>
   
   
     <div class="row">
