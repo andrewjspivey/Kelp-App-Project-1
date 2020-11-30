@@ -21,7 +21,6 @@ body {
     height: auto;
 }
 
-<<<<<<< HEAD
 
 .card-image{
     min-height: 28em;
@@ -37,7 +36,7 @@ body {
     min-height: 28em;
     margin: 20em;
 }
-=======
+
 .card-image img{
     height: 20rem; 
 }
@@ -45,4 +44,9 @@ body {
 .hero-body {
     padding: 2rem !important;
 }
->>>>>>> fixes cardimage size issue
+
+
+.card-content p {
+    font-weight: bold !important;
+}
+
