@@ -75,11 +75,7 @@ app.use("/", controllers.auth)
 
 
 //server listener
-<<<<<<< HEAD
-app.listen(process.env.PORT,  () =>  {
-=======
 app.listen(process.env.PORT || 4000,  () =>  {
->>>>>>> 04c17ec24ce572c27dd6f6a60fda255e16ff6090
     console.log(`Listening to ${PORT}`)
 })
 
