@@ -49,32 +49,32 @@
     <main>
       <form class="row" action="/reviews" method="POST">
         <div class="row">
-                    <div class="input-field col s6">
-                        <input class="validate" type="text" name="author" />
-                        <label class="active" for="author">Name</label>
+            <div class="input-field col s6">
+                <input class="validate" type="text" name="author" />
+                <label class="active" for="author">Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input class="validate" type="textbox" name="review" />
+                <label class="active" for="review">Review</label>
+            </div>
+            <div class="input-field col s6">
+              <div class="field">
+                  <div class="control">
+                    <div class="select is-primary">
+                <select>
+                  <option default>Select Restaurant</option>
+                  <% restaurants.forEach(restaurant => { %>
+                      <option value="<%= restaurant._id %>"><%= restaurant.name %></option>
+                  <% }) %> 
+                </select> 
                   </div>
-                    <div class="input-field col s6">
-                        <input class="validate" type="textbox" name="review" />
-                        <label class="active" for="review">Review</label>
-                    </div>
-                    <div class="input-field col s6">
-                    <div class="field">
-                        <div class="control">
-                          <div class="select is-primary">
-                      <select>
-                            <option default>Select Restaurant</option>
-                            <% restaurants.forEach(restaurant => { %>
-                                <option value="<%= restaurant._id %>"><%= restaurant.name %></option>
-                            <% }) %> 
-                        </select> 
-                        </div>
-                    </div>
-                    </div>
+            </div>
+            </div>
                 </div>
                     </p>
                     <input class="waves-effect waves-light btn"  type="submit" value="Submit Review">
                 </form>
-    </div>
+          </div>
     </main>
 </body>
 </html>
