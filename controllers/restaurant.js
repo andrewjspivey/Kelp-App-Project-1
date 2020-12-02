@@ -44,11 +44,14 @@ router.post('/', (req, res)=>{
     } else {
         req.body.dineIn = false;
     }
-    req.body.user = req.session.currentUser.id
-    console.log(req.body)
-    db.Restaurant.create(req.body, (error, createdRestaurant)=>{
-        res.redirect('/restaurants'); 
-    });
+    if (req.session.currentUser) {
+        req.body.user = req.session.currentUser.id;
+        db.Restaurant.create(req.body, (error, createdRestaurant)=>{
+            res.redirect('/restaurants');
+        });
+    } else {
+        res.send({message: "Please sign up or login to post a restaurant"})
+    }
 });
 
 

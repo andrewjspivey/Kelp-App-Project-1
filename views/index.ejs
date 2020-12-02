@@ -11,7 +11,6 @@
 <body>
 
     <section class="hero is-primary is-medium">
-        <!-- Hero head: will stick at the top -->
         <div class="hero-head">
           <nav class="navbar">
             <div class="container">
@@ -62,6 +61,8 @@
             </div>
           </nav>
         </div>
+      
+        <!-- Hero content: will be in the middle -->
         <div class="hero-body">
           <div class="container has-text-centered">
             <h1 class="title">
@@ -88,7 +89,7 @@
                         </a>
                         <a href="/restaurants/<%= restaurant._id %>/newreview">
                         <span class="card-title"><%= restaurant.name %></span>
-                       
+                        <a class="btn turqoise" href="/restaurants/<%= restaurant._id %>/newreview"><i class="material-icons">Write A Review</i></a>
                         </a>    
                     </div>
                     <div class="card-content">

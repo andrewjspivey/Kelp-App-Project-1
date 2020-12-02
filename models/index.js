@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 
 
 require("dotenv").config();
-const connectionString = "mongodb+srv://keyahnajanae:rainbows77@cluster0.hmdsq.mongodb.net/restaurants-db?retryWrites=true&w=majority"
-// process.env.MONGODB_URI || 'mongodb://localhost:27017/restaurants-db';
+const connectionString = "mongodb+srv://keyahnajanae:rainbows77@cluster0.hmdsq.mongodb.net/restaurants-db?retryWrites=true&w=majority" ||
+    process.env.MONGODB_URI || 'mongodb://localhost:27017/restaurants-db';
 
 
 
