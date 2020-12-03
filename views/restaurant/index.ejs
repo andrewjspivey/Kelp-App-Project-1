@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
- 
     <title>All Restaurants</title>
 </head>
 <body>
 
   <section class="hero is-primary is-medium">
-    <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar">
         <div class="container">
@@ -28,24 +26,24 @@
           </div>
           <div id="navbarMenuHeroA" class="navbar-menu">
             <div class="navbar-end">
+              <a class="navbar-item" href="/">
+                  Home
+              </a>
               <a class="navbar-item is-active" href="/restaurants">
-                All Restaurants
+                  Restaurants
               </a>
-              <a class="navbar-item" href="/">Home
+              <a class="navbar-item" href="/restaurants/new">
+                  Add a Restaurant
               </a>
-              <a class="navbar-item" href="/restaurants/new">Add a Restaurant
-             
-              </a>
-
-              <!-- Nav bar for login  -->
-              
             </div>
           </div>
         </div>
       </nav>
     </div>
   </section>
-
+  <div class="index-title">
+    <h2>Restaurants</h2>
+  </div>
   <div class="second-restaruant">  
     <div class="row">
     <% restaurants.forEach(restaurant => { %>
@@ -60,7 +58,10 @@
                     <span class="card-title"><%= restaurant.name %></span>
                     <a class="btn turqoise" href="/restaurants/<%= restaurant._id %>/newreview"><i class="material-icons">Write A Review</i></a>
                     </a>    
-                  </div>
+                </div>
+                <div class="card-content">
+                    <p><%= restaurant.name %> | <%= restaurant.location %> </p>
+                </div>
             </div>
         </div>
     <%  }); %>

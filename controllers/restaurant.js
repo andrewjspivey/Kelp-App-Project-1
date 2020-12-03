@@ -44,11 +44,14 @@ router.post('/', (req, res)=>{
     } else {
         req.body.dineIn = false;
     }
-    req.body.user = req.session.currentUser.id
-    console.log(req.body)
-    db.Restaurant.create(req.body, (error, createdRestaurant)=>{
-        res.redirect('/restaurants'); 
-    });
+    if (req.session.currentUser) {
+        req.body.user = req.session.currentUser.id;
+        db.Restaurant.create(req.body, (error, createdRestaurant)=>{
+            res.redirect('/restaurants');
+        });
+    } else {
+        res.send({message: "Please sign up or login to post a restaurant"})
+    }
 });
 
 
@@ -92,7 +95,7 @@ router.post("/:id", async (req, res) =>{
             req.body.recommend = true
         } else {
             req.body.recommend = false;
-        } 
+        }
         req.body.restaurant = req.params.id
         const createdReview = await db.Review.create(req.body);
         const foundRestaurant = await db.Restaurant.findById(req.body.restaurant);
@@ -120,10 +123,10 @@ router.get("/:id/edit", async (req, res) =>{
         if (foundRestaurant.user == req.session.currentUser.id) {
             res.render("restaurant/edit", context)
         } else {
-            res.send({message: "You are not authorized to edit this restaurant"})
+            res.send({message: "You are not authorized to edit this restaurant. If you added this restaurant, please login in and try again."})
         } 
     } catch (error) {
-        res.send({message:"Internal Service Error"})
+        res.send({message:"You are not authorized to edit this restaurant. If you added this restaurant, please login in and try again."})
         console.log(error)
     }    
 })

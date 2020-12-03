@@ -2,12 +2,10 @@ body {
     background-color: whitesmoke;
     
 }
-
 .ind-review-loop {
     font-size: 20px;
     font-weight: 10;
 }
-
 #review-review {
     padding-bottom: 20px;
     display: -webkit-inline-box;
@@ -15,24 +13,44 @@ body {
     min-width: 0;
     height: auto;
 }
-
+.review-grid {
+    margin: 0.5rem 1rem 0rem 2.5rem;
+}
+.index-title {
+    text-align: center;
+}
+.new-header {
+    text-align: center;
+}
 #restaurant-image {
-    max-width: 60%;
+    width: 65%;
     height: auto;
 }
 
-
-.card-image{
-    min-height: 28em;
-    margin: auto;
-   
+.card-image img{
+    height: 20rem; 
+    height: 18rem; 
 }
 
-.card-title{
-    background-color: teal;
+.hero-body {
+    padding: 3rem !important;
 }
-
-.card{
-    min-height: 28em;
-    margin: 20em;
+.card-title {
+    font-size: 32px !important;
+}
+.card-content p {
+    font-weight: bold !important;
+}
+.navbar {
+    margin-right: 2rem !important;
+}
+.navbar-item img {
+    max-height: 3.3rem !important;
+    margin-left: 2rem !important;
+}
+#navbarMenuHeroA.navbar-menu {
+    margin-right: 1rem !important;
+}
+#restaurant-info {
+    text-align: center;
 }

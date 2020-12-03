@@ -3,104 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <title>New Restaurant</title>
+    <title>All Restaurants</title>
 </head>
 <body>
 
-
-    <section class="hero is-primary is-medium">
-        <!-- Hero head: will stick at the top -->
-        <div class="hero-head">
-          <nav class="navbar">
-            <div class="container">
-              <div class="navbar-brand">
-                <a href="/" class="navbar-item">
-                  <img src="https://uploads-ssl.webflow.com/5be7bc39ea60003da6a932e0/5be8c37ac9fc1ff7e3038120_kelp%20logo.png" alt="Logo">
-                </a>
-                <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </span>
-              </div>
-              <div id="navbarMenuHeroA" class="navbar-menu">
-                <div class="navbar-end">
-                  <a class="navbar-item is-active" href="/restaurants">
-                    All Restaurants
-                  </a>
-                  <a class="navbar-item" href="/">Home
-                  </a>
-                  <a class="navbar-item" href="/restaurants/new">Add a Restaurant
-                 
-                  </a>
-
-                  <!-- Nav bar for login  -->
-                  
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </section>
-
-        <div class="row">
-            <h1 class="new-restaurant">New Restaurant</h1>
-    <form class="col s12" action="/restaurants" method="POST">
-        
-        <div class="input-field inline col s6">
-        <input class="validate" type="text" name="name" />
-        <label class="active" for="name">Name</label>
-    </div>
-    <div class="input-field inline col s6">
-        <input class="validate" type="text" name="location" />
-        <label class="active" for="location">Location- city and or general area</label>
-        </div>
-        <div class="input-field inline col s6">
-            <input class="validate" type="text" name="address" />
-              <label class="active" for="address">Address</label>
+  <section class="hero is-primary is-medium">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a href="/" class="navbar-item">
+              <img src="https://uploads-ssl.webflow.com/5be7bc39ea60003da6a932e0/5be8c37ac9fc1ff7e3038120_kelp%20logo.png" alt="Logo">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
           </div>
-        <div class="input-field inline col s6">
-      <input class="validate" type="text" name="businessHours" />
-        <label class="active" for="businessHours">Business Hours</label>
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item" href="/">
+                  Home
+              </a>
+              <a class="navbar-item is-active" href="/restaurants">
+                  Restaurants
+              </a>
+              <a class="navbar-item" href="/restaurants/new">
+                  Add a Restaurant
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
-    <input class="validate" type="text" name="image" />
-    <label class="active" for="image">Upload An Image</label>
-    <input class="validate" type="text" name="description" />
-    <label class="active" for="description">Short description or categories ex. Italian, or: salads, soups, and sandwhiches</label>
-  
-<div class="row">
-    <div class="input-field inline col s6">
-        <label id="delivery-checkbox">
-            <input class="validate" type="checkbox" name="delivery" id="delivery-checkbox" type="checkbox" />
-            <span>Delivery Options? </span>
-          </label>
+  </section>
+    <div class="new-header">
+      <h1>New Restaurant</h1>
     </div>
-        <div class="input-field inline col s6">
-        <label id="takeout-checkbox">
-            <input class="validate" type="checkbox" name="takeOut" id="takeout-checkbox" type="checkbox" />
-            <span>Take Out Options? </span>
-          </label>
+        <div class="row">
+          <form class="col s12" action="/restaurants" method="POST">
+              <div class="input-field inline col s6">
+                <input class="validate" type="text" name="name" />
+                <label class="active" for="name">Name</label>
+              </div>
+              <div class="input-field inline col s6">
+                <input class="validate" type="text" name="location" />
+                <label class="active" for="location">Location- city and or general area</label>
+              </div>
+              <div class="input-field inline col s6">
+                  <input class="validate" type="text" name="address" />
+                  <label class="active" for="address">Address</label>
+              </div>
+              <div class="input-field inline col s6">
+                  <input class="validate" type="text" name="businessHours" />
+                  <label class="active" for="businessHours">Business Hours</label>
+              </div>
+                  <input class="validate" type="text" name="image" />
+                  <label class="active" for="image">Upload An Image</label>
+                  <input class="validate" type="text" name="description" />
+                  <label class="active" for="description">Short description or categories ex. Italian, or: salads, soups, and sandwhiches</label>
+    
+              <div class="row">
+                  <div class="input-field inline col s6">
+                      <label id="delivery-checkbox">
+                          <input class="validate" type="checkbox" name="delivery" id="delivery-checkbox" />
+                          <span>Delivery Options? </span>
+                        </label>
+                  </div>
+                      <div class="input-field inline col s6">
+                      <label id="takeout-checkbox">
+                          <input class="validate" type="checkbox" name="takeOut" id="takeout-checkbox" />
+                          <span>Take Out Options? </span>
+                        </label>
+                  </div>
+                      <div class="input-field inline col s6">
+                  <label id="dinein-checkbox">
+                      <input class="validate" type="checkbox" name="dineIn" id="dinein-checkbox" />
+                      <span>Dine In Option? </span>
+                    </label>
+                  </div>
+              </div>
+        
+            <div class="row">
+                <div class="input-field inline col s6">
+                    <input class="waves-effect waves-light btn" type="submit" value="New Restaurant" />
+                </div>
+            </div>
+        </form>
     </div>
-        <div class="input-field inline col s6">
-         
-    <label id="dinein-checkbox">
-        <input class="validate" type="checkbox" name="dineIn" id="dinein-checkbox" type="checkbox" />
-        <span>Dine In Option? </span>
-      </label>
-
-    </div>
-    </div>
-  
-<div class="row">
-    <div class="input-field inline col s6">
-        <input class="waves-effect waves-light btn" type="submit" value="New Restaurant" />
-    </div>
-    </div>
-    </form>
-</form>
-</div>
 </body>
 </html>

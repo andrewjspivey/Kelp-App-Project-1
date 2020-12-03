@@ -11,7 +11,6 @@
 </head>
 <body>
     <section class="hero is-primary is-medium">
-        <!-- Hero head: will stick at the top -->
         <div class="hero-head">
           <nav class="navbar">
             <div class="container">
@@ -28,90 +27,76 @@
               <div id="navbarMenuHeroA" class="navbar-menu">
                 <div class="navbar-end">
                   <a class="navbar-item is-active" href="/restaurants">
-                    All Restaurants
+                    Restaurants
                   </a>
                   <a class="navbar-item" href="/">Home
                   </a>
                   <a class="navbar-item" href="/restaurants/new">Add a Restaurant
-                 
                   </a>
-
-            
-                  
                 </div>
               </div>
             </div>
           </nav>
         </div>
-        </section>
-    
-    <h1><%= restaurant.name %></h1> 
-    <a class="waves-effect waves-light btn" href="/restaurants/<%= restaurant._id %>/edit">Edit Restaurant</a>
-    <div class="input-field inline col s6">
+      </section>
 
-    <div class="write-review-btn">  <a class="waves-effect waves-light btn" href="/restaurants/<%= restaurant._id %>/newreview">Write a Review</a></div>
-  </div>
-    <br>
-    <img id="restaurant-image"src="<%= restaurant.image %>">
-    <br>
-   
+    <div id="restaurant-info">
+        <h1><%= restaurant.name %></h1> 
+        <a class="waves-effect waves-light btn" href="/restaurants/<%= restaurant._id %>/edit">
+          Edit Restaurant
+        </a>
 
-    <h3><%= restaurant.location %></h3>
-    <h4><%= restaurant.address %> </h4>
-  
+        <div class="input-field inline col s6">
 
-    <% if(!restaurant.businessHours){ %>
-     <p>Business Hours Unavailable</p>
-    <% } else { %>
-    <p>Business Hours: <%= restaurant.businessHours %></p>
-    <% } %>
-     
-    
-
-<% if(restaurant.delivery == true){ %>
-  <a class="waves-effect waves-light btn pulse"><i class="material-icons">Delivery Available</i></a>
-<% } %>
-
-<% if(restaurant.takeOut == true){ %>
-  <a class="waves-effect waves-light btn pulse"><i class="material-icons">Take Out Available</i></a>
-<% } %>
-
-<% if(restaurant.dineIn == true){ %>
-  <a class="waves-effect waves-light btn pulse"><i class="material-icons">Dine In Options</i></a>
-
-<% } %>
-
-    
-   
-  
+          <div class="write-review-btn">  <a class="waves-effect waves-light btn" href="/restaurants/<%= restaurant._id %>/newreview">Write a Review</a></div>
+          </div>
+          <br>
+          <img id="restaurant-image"src="<%= restaurant.image %>">
+          <br>
+      
+          <h3><%= restaurant.location %></h3>
+          <h4><%= restaurant.address %> </h4>
+          <h6><%= restaurant.description %></h6>
+        
+          <% if(!restaurant.businessHours){ %>
+          <p>Business Hours Unavailable</p>
+          <% } else { %>
+          <p>Business Hours: <%= restaurant.businessHours %></p>
+          <% } %>       
+          <% if(restaurant.delivery == true){ %>
+            <a class="waves-effect waves-light btn pulse"><i class="material-icons">Delivery Available</i></a>
+          <% } %>
+          <% if(restaurant.takeOut == true){ %>
+            <a class="waves-effect waves-light btn pulse"><i class="material-icons">Take Out Available</i></a>
+          <% } %>
+          <% if(restaurant.dineIn == true){ %>
+            <a class="waves-effect waves-light btn pulse"><i class="material-icons">Dine In Options</i></a>
+          <% } %>
+    </div>
   
     <div class="row">
-    <div class="review-grid col 12">
-   
-        <h2>Reviews</h2>
-        <p>
-          <span class="flow-text">
-        <ul class="review-loop">
-            <% restaurant.review.forEach(review => { %>
-              <strong>
-            <li class="ind-review-loop"><%= review.author %> 
-            <% if(review.recommend == true) { %>
-                recommends <%= restaurant.name %> 
-            <% } else { %>
-                does not recommend <%= restaurant.name %>
-            <% } %>
-        </li>
-      </strong></br>
-    </span>
-            <p id="review-review"><%= review.review %></p>
-        <% }) %> 
-        </ul>
-      </p>
-   
-  </div>
-  </div>
+      <div class="review-grid col 12">
+          <h2>Reviews</h2>
+          <p>
+            <span class="flow-text">
+              <ul class="review-loop">
+                  <% restaurant.review.forEach(review => { %>
+                    <strong>
+                  <li class="ind-review-loop"><%= review.author %> 
+                  <% if(review.recommend == true) { %>
+                      recommends <%= restaurant.name %> 
+                  <% } else { %>
+                      does not recommend <%= restaurant.name %>
+                  <% } %>
+                  </li>
+                </strong></br>
+            </span>
+              <p id="review-review"><%= review.review %></p>
+                  <% }) %> 
+              </ul>
+          </p>
+      </div>
+    </div>
 </body>
 </html>
 
-
-<!-- Title, Whole review, button -->

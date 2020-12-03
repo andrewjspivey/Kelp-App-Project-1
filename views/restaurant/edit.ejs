@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Edit</title>
 </head>
 <body>
   <section class="hero is-primary is-medium">
-    <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar">
         <div class="container">
@@ -27,16 +26,14 @@
           <div id="navbarMenuHeroA" class="navbar-menu">
             <div class="navbar-end">
               <a class="navbar-item is-active" href="/restaurants">
-                All Restaurants
+                Restaurants
               </a>
-              <a class="navbar-item" href="/">Home
+              <a class="navbar-item" href="/">
+                Home
               </a>
-              <a class="navbar-item" href="/restaurants/new">Add a Restaurant
-             
+              <a class="navbar-item" href="/restaurants/new">
+                Add a Restaurant
               </a>
-
-              <!-- Nav bar for login  -->
-              
             </div>
           </div>
         </div>
@@ -45,70 +42,66 @@
   </section>
 
 
-   
+  <div class="row">
+      <h1 class="update-restaurant">Update <%= restaurant.name %> </h1>
+      <form action="/restaurants/<%= restaurant._id %>?_method=PUT" method="POST">
+        <div class="input-field inline col s6">
+          <input class="validate" type="text" name="name" value='<%=restaurant.name%>'/>
+          <label class="active" for="name">Name</label>
+        </div>
+        <div class="input-field inline col s6">
+          <input class="validate" type="text" name="location" value='<%=restaurant.location%>'/>
+          <label class="active" for="location">Location- city and or general area</label>
+        </div>
+        <div class="input-field inline col s6">
+          <input class="validate" type="text" name="address" value='<%=restaurant.address%>'/>
+          <label class="active" for="address">Address</label>
+        </div>
+        <div class="input-field inline col s6">
+          <input class="validate" type="text" name="businessHours" value='<%=restaurant.businessHours%>'/>
+          <label class="active" for="businessHours">Business Hours</label>
+        </div>
+        <input class="validate" type="text" name="image" value='<%=restaurant.image%>'/>
+        <label class="active" for="image">Upload An Image</label>
+        <input class="validate" type="text" name="description" value='<%=restaurant.description%>' />
+        <label class="active" for="description">Short description or categories ex. Italian, or: salads, soups, and sandwhiches</label>
 
+
+      <div class="row">
+        <div class="input-field inline col s6">
+          <label id="delivery-checkbox">
+              <input class="validate" type="checkbox" name="delivery" <%=restaurant.delivery ? "checked" : ""%> id="delivery-checkbox" />
+              <span>Delivery Options?</span>
+          </label>
+        </div>
+      <div class="input-field inline col s6">
+        <label id="takeout-checkbox">
+            <input class="validate" type="checkbox" name="takeOut" <%=restaurant.takeOut ? "checked" : ""%> id="takeout-checkbox" />
+            <span>Take Out Options?</span>
+        </label>
+      </div>
+      <div class="input-field inline col s6">
+        <label id="dinein-checkbox">
+          <input class="validate" type="checkbox" name="dineIn" <%=restaurant.dineIn ? "checked" : ""%> id="dinein-checkbox" />
+          <span>Dine In Option?</span>
+        </label>
+      </div>
+  </div>
 
     <div class="row">
-      <h1 class="update-restaurant">Edit <%= restaurant.name %> </h1>
-  <form action="/restaurants/<%= restaurant._id %>?_method=PUT" method="POST">
-  <div class="input-field inline col s6">
-  <input class="validate" type="text" name="name" />
-  <label class="active" for="name">Name</label>
-</div>
-<div class="input-field inline col s6">
-  <input class="validate" type="text" name="location" />
-  <label class="active" for="location">Location- city and or general area</label>
-  </div>
-  <div class="input-field inline col s6">
-      <input class="validate" type="text" name="address" />
-        <label class="active" for="address">Address</label>
-    </div>
-  <div class="input-field inline col s6">
-<input class="validate" type="text" name="businessHours" />
-  <label class="active" for="businessHours">Business Hours</label>
-</div>
-<input class="validate" type="text" name="image" />
-<label class="active" for="image">Upload An Image</label>
+      <div class="input-field inline col s6">
+        <input class="waves-effect waves-light btn" type="submit" value="Update Restaurant Info " />
+      </div>
 
-
-<div class="row">
-<div class="input-field inline col s6">
-  <label id="delivery-checkbox">
-      <input class="validate" type="checkbox" name="delivery" id="delivery-checkbox" type="checkbox" />
-      <span>Delivery Options? </span>
-    </label>
-</div>
-  <div class="input-field inline col s6">
-  <label id="takeout-checkbox">
-      <input class="validate" type="checkbox" name="takeOut" id="takeout-checkbox" type="checkbox" />
-      <span>Take Out Options? </span>
-    </label>
-</div>
-  <div class="input-field inline col s6">
-   
-<label id="dinein-checkbox">
-  <input class="validate" type="checkbox" name="dineIn" id="dinein-checkbox" type="checkbox" />
-  <span>Dine In Option? </span>
-</label>
-
-</div>
-</div>
-
-<div class="row">
-<div class="input-field inline col s6">
-  <input class="waves-effect waves-light btn" type="submit" value="Update Restaurant Info " />
-</div>
-
-<div class="row">
-
-</form>
-<form action="/restaurants/<%= restaurant._id %>?_method=DELETE" method="POST">
-  <input class="waves-effect waves-light btn" type="submit" value="Delete" />
-</div>
-</div>
   </form>
 
-     
+      <div class="row">
+        <form action="/restaurants/<%= restaurant._id %>?_method=DELETE" method="POST">
+        <input class="waves-effect waves-light btn" type="submit" value="Delete" />
+      </div>
+    </div>
+
+  </form>
 
 </body>
 </html> 
