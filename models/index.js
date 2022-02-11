@@ -7,6 +7,7 @@ const connectionString = "mongodb+srv://keyahnajanae:Rainbows@cluster0.hmdsq.mon
     process.env.MONGODB_URI || 'mongodb://localhost:27017/restaurants-db';
 
 
+mongoose.set('useCreateIndex', true);
 
 mongoose.connect(connectionString, {
     useNewUrlParser: true,

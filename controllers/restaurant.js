@@ -1,5 +1,5 @@
 const express = require("express");
-const { restaurant } = require(".");
+// const { restaurant } = require(".");
 const router = express.Router();
 
 const db = require("../models");
