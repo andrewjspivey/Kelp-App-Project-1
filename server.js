@@ -29,7 +29,7 @@ app.use(session({
     saveUninitialized: false,
     secret: process.env.SECRET,
     store: new MongoStore({
-        url: process.env.MONGODB_URI || "mongodb://localhost:27017/restaurant-session",
+        url: process.env.MONGODB_URI || "mongodb://localhost:27017/restaurants-db",
     }),
     cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 7
