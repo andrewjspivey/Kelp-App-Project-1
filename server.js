@@ -11,13 +11,13 @@ const app = express();
 
 require("dotenv").config();
 
-const PORT = process.env.PORT ;
+const PORT = process.env.PORT || 4000;
 // Internal modules
 const db = require("./models");
 app.set("view engine", "ejs")
 
 const controllers = require("./controllers");
-const { restaurant } = require("./controllers");
+
 
 
 //Middleware
@@ -29,7 +29,7 @@ app.use(session({
     saveUninitialized: false,
     secret: process.env.SECRET,
     store: new MongoStore({
-        url: process.env.MONGODB_URI || "mongodb://localhost:27017/restaurant-session",
+        url: process.env.MONGODB_URI || "mongodb://localhost:27017/restaurants-db",
     }),
     cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 7
@@ -46,9 +46,7 @@ const authRequired = (req, res, next) => {
 //Routes
 
 //index route
-/* app.get("/", function(req, res) {
-    res.render("index.ejs", {user: req.session.currentUser })
-}) */
+
 
 app.get("/", async (req, res) => {
     try {
