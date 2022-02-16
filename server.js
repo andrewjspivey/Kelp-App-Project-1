@@ -11,6 +11,8 @@ const app = express();
 
 require("dotenv").config();
 
+// process.on('warning', e => console.warn(e.stack));
+
 const PORT = process.env.PORT || '4000';
 // Internal modules
 const db = require("./models");
