@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>All Restaurants</title>
 </head>
-<body>
+<body class="new-rst-body">
 
   <section class="hero is-primary is-medium">
     <div class="hero-head">
@@ -41,11 +41,12 @@
       </nav>
     </div>
   </section>
+  <div class="new-rst">
     <div class="new-header">
       <h1>New Restaurant</h1>
     </div>
-        <div class="row">
-          <form class="col s12" action="/restaurants" method="POST">
+        <div id="new-rst-inf" class="row">
+          <form class="col s8" action="/restaurants" method="POST">
               <div class="input-field inline col s6">
                 <input class="validate" type="text" name="name" />
                 <label class="active" for="name">Name</label>
@@ -67,7 +68,7 @@
                   <input class="validate" type="text" name="description" />
                   <label class="active" for="description">Short description or categories ex. Italian, or: salads, soups, and sandwhiches</label>
     
-              <div class="row">
+              <div id="new-rst-ck" class="row">
                   <div class="input-field inline col s6">
                       <label id="delivery-checkbox">
                           <input class="validate" type="checkbox" name="delivery" id="delivery-checkbox" />
@@ -88,12 +89,13 @@
                   </div>
               </div>
         
-            <div class="row">
+            <div id="new-btn" class="row">
                 <div class="input-field inline col s6">
                     <input class="waves-effect waves-light btn" type="submit" value="New Restaurant" />
                 </div>
             </div>
         </form>
     </div>
+  </div>
 </body>
 </html>

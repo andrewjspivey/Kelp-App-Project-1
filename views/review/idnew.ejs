@@ -39,11 +39,14 @@
     </section>
 
 
-     
-    <h1>Review <%= restaurant.name %> of <%= restaurant.location %></h1>
+     <div class="id-inf">
+       
+    
     <main>
-        <div class="row">
-        <form action="/restaurants/<%= restaurant._id %>" method="POST">
+      
+        <div id="id-row"class="row">
+          <h1 class="rev">Review <%= restaurant.name %> of <%= restaurant.location %></h1>
+        <form class="id-form"action="/restaurants/<%= restaurant._id %>" method="POST">
             <div class="row">
                 <div class="input-field col s6">
                     <input class="validate" type="text" name="author" />
@@ -63,5 +66,6 @@
         </form>
         </div>
     </main>
+  </div>
 </body>
 </html>
