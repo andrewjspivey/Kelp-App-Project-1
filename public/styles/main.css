@@ -1,7 +1,26 @@
-body {
-    background-color: whitesmoke;
+:root{
+    
+
+
+
+}
+
+body 
+{
+    
+    background-color: rgb(236, 236, 241);
+    margin-top: 30px;
     
 }
+
+.rst_sec{
+    
+    margin: auto;
+    width:75%;
+   
+    
+}
+
 .ind-review-loop {
     font-size: 20px;
     font-weight: 10;
@@ -23,15 +42,29 @@ body {
     text-align: center;
 }
 #restaurant-image {
-    width: 65%;
+    width: 50%;
     height: auto;
+    display:block;
+    margin-left: auto;
+    margin-right: 7rem;
+    float:right;
+   
 }
 
 .card-image img{
     height: 20rem; 
     height: 18rem; 
+    
+   
 }
 
+
+#row-ind{
+   /* width:1200px;
+
+} */
+width:100rem;
+}
 .hero-body {
     padding: 3rem !important;
 }
@@ -43,6 +76,9 @@ body {
 }
 .navbar {
     margin-right: 2rem !important;
+    background-color:rgb(12, 158, 109);
+    
+    
 }
 .navbar-item img {
     max-height: 3.3rem !important;
@@ -54,3 +90,91 @@ body {
 #restaurant-info {
     text-align: center;
 }
+ .rst-name{
+text-align: center;
+ }  
+    
+    
+    
+   
+
+.hero{
+    margin-top: 50px;
+}
+
+.rst-inf{
+   text-align: center;
+  
+   float: left;
+   
+   margin-left: 13rem;
+   margin-top: 8rem;
+
+  
+   
+   
+}
+
+#sec-rst{
+    
+    width:85%;
+    margin: auto;
+   
+}
+
+.hero-head{
+   background-color: rgb(153, 144, 161);
+  position: fixed;
+  width: 100%;
+  top:0;
+
+  
+  
+
+}
+
+
+
+.navbar-end {
+    position: absolute;
+    right: 0.2em;
+    bottom:0.5em;
+    
+    
+    
+
+}
+
+.btns{
+   margin-left:18rem;
+   float: left;
+   display: grid;
+  grid-template-columns: 1fr 1fr ;
+  font-size: 20px;
+  text-align: center;
+  column-gap: 2rem;
+ 
+ 
+  
+  
+    
+}
+
+
+
+a.btn:hover{
+    color: #af4c6a;
+}
+
+a.btn{
+    color:black;
+}
+
+@media screen and (max-width:960px){
+
+
+.btns{
+    font-size: 16px;
+
+}
+

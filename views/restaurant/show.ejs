@@ -41,20 +41,29 @@
       </section>
 
     <div id="restaurant-info">
-        <h1><%= restaurant.name %></h1> 
-        <a class="waves-effect waves-light btn" href="/restaurants/<%= restaurant._id %>/edit">
+        <h1 class="rst-name"><%= restaurant.name %></h1> 
+        <div class="btns">
+         
+        <a class="btn" href="/restaurants/<%= restaurant._id %>/edit">
           Edit Restaurant
         </a>
+    
+        <!-- <div class="input-field inline col s6"> -->
 
-        <div class="input-field inline col s6">
+          <!-- class="waves-effect waves-light btn" -->
 
-          <div class="write-review-btn">  <a class="waves-effect waves-light btn" href="/restaurants/<%= restaurant._id %>/newreview">Write a Review</a></div>
+          <div class="write-review-btn">  
+          <a class="btn" href="/restaurants/<%= restaurant._id %>/newreview">Write a Review</a>
+        
+        </div>
           </div>
+        </div>
           <br>
           <img id="restaurant-image"src="<%= restaurant.image %>">
           <br>
-      
+          <div class="rst-inf">
           <h3><%= restaurant.location %></h3>
+       
           <h4><%= restaurant.address %> </h4>
           <h6><%= restaurant.description %></h6>
         
@@ -64,13 +73,14 @@
           <p>Business Hours: <%= restaurant.businessHours %></p>
           <% } %>       
           <% if(restaurant.delivery == true){ %>
-            <a class="waves-effect waves-light btn pulse"><i class="material-icons">Delivery Available</i></a>
+         
+            <a class="waves-effect waves-light btn pulse" ><i class="material-icons">Delivery Available</i></a>
           <% } %>
           <% if(restaurant.takeOut == true){ %>
-            <a class="waves-effect waves-light btn pulse"><i class="material-icons">Take Out Available</i></a>
+            <a    class="waves-effect waves-light btn pulse"><i class="material-icons">Take Out Available</i></a>
           <% } %>
           <% if(restaurant.dineIn == true){ %>
-            <a class="waves-effect waves-light btn pulse"><i class="material-icons">Dine In Options</i></a>
+            <a    class="waves-effect waves-light btn pulse"><i class="material-icons">Dine In Options</i></a>
           <% } %>
     </div>
   
