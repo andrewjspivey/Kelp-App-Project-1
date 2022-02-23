@@ -11,7 +11,6 @@ router.get("/register", (req, res) => {
 });
 
 //Register Post
-
 router.post("/register", async (req, res) => {
     console.log('form data:', req.body)
     try {

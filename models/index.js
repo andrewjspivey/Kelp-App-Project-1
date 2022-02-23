@@ -6,7 +6,8 @@ require("dotenv").config();
 const connectionString = "mongodb://keyahnajanae:Rainbows@cluster0-shard-00-00.hmdsq.mongodb.net:27017,cluster0-shard-00-01.hmdsq.mongodb.net:27017,cluster0-shard-00-02.hmdsq.mongodb.net:27017/restaurants-db?ssl=true&replicaSet=atlas-hu1jry-shard-0&authSource=admin&retryWrites=true&w=majority" ||
     process.env.MONGODB_URI || 'mongodb://localhost:27017/restaurants-db';
 
-    mongoose.set('useCreateIndex', true);
+
+mongoose.set('useCreateIndex', true);
 
 mongoose.connect(connectionString, {
     useNewUrlParser: true,

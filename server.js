@@ -11,13 +11,14 @@ const app = express();
 
 require("dotenv").config();
 
-const PORT = process.env.PORT || '4000' ;
+// process.on('warning', e => console.warn(e.stack));
+
+const PORT = process.env.PORT || '4000';
 // Internal modules
 const db = require("./models");
 app.set("view engine", "ejs")
 
 const controllers = require("./controllers");
-// const { restaurant } = require("./controllers");
 
 
 //Middleware
@@ -46,9 +47,7 @@ const authRequired = (req, res, next) => {
 //Routes
 
 //index route
-/* app.get("/", function(req, res) {
-    res.render("index.ejs", {user: req.session.currentUser })
-}) */
+
 
 app.get("/", async (req, res) => {
     try {
