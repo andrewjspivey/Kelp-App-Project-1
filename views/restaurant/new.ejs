@@ -42,46 +42,52 @@
     </div>
   </section>
   <div class="new-rst">
-    <div class="new-header">
-      <h1>New Restaurant</h1>
-    </div>
+   
+     
+    
         <div id="new-rst-inf" class="row">
-          <form class="col s8" action="/restaurants" method="POST">
-              <div class="input-field inline col s6">
+          <div class="new-header">
+          <h1>New Restaurant</h1>
+        </div>
+          <form class="col s9" action="/restaurants" method="POST">
+              <div class="input-field inline col s8">
                 <input class="validate" type="text" name="name" />
                 <label class="active" for="name">Name</label>
               </div>
-              <div class="input-field inline col s6">
+              <div class="input-field inline col s8">
                 <input class="validate" type="text" name="location" />
                 <label class="active" for="location">Location- city and or general area</label>
               </div>
-              <div class="input-field inline col s6">
+              <div class="input-field inline col s8">
                   <input class="validate" type="text" name="address" />
                   <label class="active" for="address">Address</label>
               </div>
-              <div class="input-field inline col s6">
+              <div class="input-field inline col s8">
                   <input class="validate" type="text" name="businessHours" />
                   <label class="active" for="businessHours">Business Hours</label>
               </div>
+              <div class="input-field inline col s8">
                   <input class="validate" type="text" name="image" />
                   <label class="active" for="image">Upload An Image</label>
+                  </div>
+                  <div class="input-field inline col s8">
                   <input class="validate" type="text" name="description" />
-                  <label class="active" for="description">Short description or categories ex. Italian, or: salads, soups, and sandwhiches</label>
-    
+                  <label class="active" for="description">Short description or categories ex. Italian, </label>
+    </div>
               <div id="new-rst-ck" class="row">
-                  <div class="input-field inline col s6">
+                  <div class="input-field inline col s4">
                       <label id="delivery-checkbox">
                           <input class="validate" type="checkbox" name="delivery" id="delivery-checkbox" />
                           <span>Delivery Options? </span>
                         </label>
                   </div>
-                      <div class="input-field inline col s6">
+                      <div class="input-field inline col s4">
                       <label id="takeout-checkbox">
                           <input class="validate" type="checkbox" name="takeOut" id="takeout-checkbox" />
                           <span>Take Out Options? </span>
                         </label>
                   </div>
-                      <div class="input-field inline col s6">
+                      <div class="input-field inline col s4">
                   <label id="dinein-checkbox">
                       <input class="validate" type="checkbox" name="dineIn" id="dinein-checkbox" />
                       <span>Dine In Option? </span>
