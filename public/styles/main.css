@@ -1,6 +1,5 @@
 :root{
-    height:100vh;
-    width: auto;
+  
 
 
 }
@@ -11,24 +10,52 @@ body
     background-color: rgb(236, 236, 241);
     margin-top: 30px;
     margin-bottom: 30px;
-   
-   
- 
-    
+    height:100vh;  
+}
+
+
+.rst_sec{
+    height: 100vh;
+}
+
+#navbarMenuHeroA > div > a:nth-child(1){
+    color: black;
+}
+
+#navbarMenuHeroA > div > a:nth-child(2){
+    color: black;
 }
 
 .rst_sec{
     
     top: 2em;
     margin: auto;
-    width:80%;
+    width:90%;
     
-    height:100vh;
-    
-    
-    
+    height:100vh; 
 }
-    
+
+
+
+body > section > div > nav > div > div.navbar-brand > a:hover{
+    background-color: #74C7B8;
+}
+
+#navbarMenuHeroA > div > a:nth-child(1):hover{
+    background-color: #EF4F4F;
+}
+
+#navbarMenuHeroA > div > a.navbar-item.is-active:hover{
+    background-color: #EF4F4F;
+}
+
+#navbarMenuHeroA > div > a:nth-child(3):hover{
+    background-color: #EF4F4F;
+}
+
+#navbarMenuHeroA > div > a.navbar-item.is-active{
+    background-color: #74C7B8;;
+}
 
 div.card{
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -71,18 +98,20 @@ margin: 3em 3em 3em auto;
 
 .card-image img{
     height: 20rem; 
-    height: 18rem; 
+    width: 18rem; 
     
    
 }
 
 
-#row-ind{
-   /* width:1200px;
 
-} */
-width:100rem;
+.card{
+    
+    height: 450px;
 }
+
+
+
 .hero-body {
     padding: 3rem !important;
 }
@@ -94,14 +123,21 @@ width:100rem;
 }
 .navbar {
     margin-right: 2rem !important;
-    background-color:rgb(12, 158, 109);
-    
-    
+    /* background-color:rgb(12, 158, 109); */
 }
+
+
+
 .navbar-item img {
     max-height: 3.3rem !important;
     margin-left: 2rem !important;
 }
+
+/* .navbar-item img:hover {
+    background-color: #af4c6a;
+} */
+
+
 #navbarMenuHeroA.navbar-menu {
     margin-right: 1rem !important;
 }
@@ -111,13 +147,48 @@ width:100rem;
  .rst-name{
 text-align: center;
  }  
-    
-    
-    
-   
 
-.hero{
-    margin-top: 50px;
+
+.index-title{
+    margin-top: 90px;
+    
+}
+
+h1.title{
+    font-size: 100px;
+    margin-top: 80px;
+    color: #FFCDA3;
+}
+
+h2.subtitle{
+font-size: 50px;
+color: #FFCDA3;
+}
+
+
+
+.rst-name{
+    margin-top: 100px;
+}
+
+#new-hero{
+    background-image: url('https://s3-media0.fl.yelpcdn.com/bphoto/TaW5o-S7q8-QYkLTWtRYFw/o.jpg');
+    height:500px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    margin-right: 200px;  
+}
+
+
+/* 
+body > section > div.hero > div{
+margin-top: 18em;
+text-align: center;
+} */
+
+.container.has-text-centered{
+    font-size: 30px;
 }
 
 .rst-inf{
@@ -145,11 +216,6 @@ text-align: center;
     text-align: center;
     height: 150vh;
     margin-top: 15em;
-   
-   
-
-   
-   
 }
 
 #new-rst-ck{
@@ -171,9 +237,7 @@ text-align: center;
 }
 
 #new-rst-inf{
- 
-  
-  
+
    margin-top: 10em;
 
    text-align: center;
@@ -184,9 +248,6 @@ text-align: center;
    margin-left: 32em;
    box-shadow: 12px 12px 22px 12px aquamarine;
    margin-right:20em ;
-
-  
-
 
 }
 
@@ -214,9 +275,7 @@ h1.rev{
 
 height:150vh;
 width: 50%;
- 
-  
-  
+
 }
 
 #id-row{
@@ -229,14 +288,15 @@ width: 50%;
     border-radius: 15px 50px;
     
     margin-left: 32em;
-    box-shadow: 12px 12px 22px 12px aquamarine;
+    box-shadow: 12px 12px 22px 12px #74C7B8;;
     margin-right:1em ;
 }
 
 .id-form{
     margin-top: 7em;
-    
 }
+
+
 
 
 div.input-field.col.s8 > label{
@@ -251,6 +311,7 @@ div.input-field.col.s8{
     display: block;
     
 }
+
 
 #new-btn{
     position: relative;
@@ -270,11 +331,16 @@ div.input-field.col.s8{
 }
 
 .hero-head{
-   background-color: rgb(153, 144, 161);
+   background-color: #EE9595;
   position: fixed;
   width: 100%;
   top:0;
   z-index: 2;
+}
+
+#hero-head{
+    background-color: transparent;
+    
 }
 
 #takeout-checkbox:hover{
@@ -293,11 +359,17 @@ color: black;
 .navbar-end {
     position: absolute;
     right: 0.2em;
-    bottom:0.5em;
+    top:1em;
+    margin-right: 1em;
+    font-size: 17px;
+    color: black
     
-    
-    
+}
 
+#navbarMenuHeroA > div > div > p{
+    margin-top: 1em;
+    font-size: 17px;
+    color: black;
 }
 
 .btns{
@@ -309,7 +381,15 @@ color: black;
   text-align: center;
   column-gap: 2rem;
   margin-top: 100px;
- 
+  
+}
+
+#home-btn{
+    background-color: #74C7B8;
+}
+
+#home-btn:hover{
+background-color: #FFCDA3;
 }
 
 
@@ -320,7 +400,13 @@ a.btn:hover{
 
 a.btn{
     color:black;
+    background-color: #74C7B8;
 }
+
+#navbarMenuHeroA > div > a:nth-child(2):hover{
+    background-color: #EF4F4F; ;
+}
+
 
 
 @media screen and (max-width:1800px){
@@ -328,19 +414,26 @@ a.btn{
        
     }
 
+   
+
 }
 
-@media screen and (max-width:1530px){
-
+@media screen and (max-width:1650px){
+ 
+ 
+    body{
+     height:200vh;
+ }
 
     .rst-inf{
         position: relative;
         bottom:20em;
         right:10em;
-        
-        
-      
-        
-     
      }
 
+     #id-row > form > div > input{
+        position: relative;
+        bottom: 5em;
+    }
+    
+    }
