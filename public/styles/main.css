@@ -413,7 +413,10 @@ a.btn{
     .rst_sec{
        
     }
-
+    
+    body{
+        height:200vh;
+    }
    
 
 }
